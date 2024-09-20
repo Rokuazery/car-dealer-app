@@ -13,7 +13,9 @@ return new class extends Migration
     {
          Schema::create('orders', function (Blueprint $table) {
             $table->id(); // Primary Key
-            $table->foreignId('car_id')->constrained('cars')->onDelete('cascade'); // Foreign Key referencing cars table
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade'); // Fixed column name
+            $table->foreignId('car_id')->constrained('cars')->onDelete('cascade');
+
             $table->string('customer_name');
             $table->date('ordered_at');
             $table->enum('status', ['Pending', 'Confirmed', 'Canceled']); // Order status options

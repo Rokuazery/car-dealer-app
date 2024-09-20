@@ -41,15 +41,10 @@ class User extends Authenticatable
     protected $casts = [
         'role' => 'string',
     ];
-
-    /**
+        /**
      * Automatically hash the password when setting it.
      *
-     * @param string $value
+     * @param string $value 
      * @return void
      */
-    public function setPasswordAttribute($value)
-    {
-        $this->attributes['password'] = bcrypt($value);
-    }
 }

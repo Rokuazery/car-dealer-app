@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
             User::create([
                 'name' => $faker->name,
                 'username' => $faker->unique()->userName,
-                'password' => Hash::make('password'), // Default password
+                'password' => "password", // Default password
                 'role' => $faker->randomElement(['admin', 'staff']),
             ]);
         }
