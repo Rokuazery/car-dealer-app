@@ -26,7 +26,7 @@ To set up the project locally, follow these steps:
 1. **Clone the repository**:
 
     ```bash
-    https://github.com/Rokuazery/car-dealer-app
+    git clone https://github.com/Rokuazery/car-dealer-app
     cd car-dealer-app
     ```
 
